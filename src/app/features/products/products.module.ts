@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CustomersRoutingModule } from './customers-routing.module';
+import { ProductsRoutingModule } from './products-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { CustomerListComponent } from './product-list/customer-list.component';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    CustomersRoutingModule,
+    ProductsRoutingModule,
     SharedModule
   ],
   declarations: [
-    CustomerListComponent
+    ProductListComponent
   ],
   entryComponents: [
   ]
 })
-export class CustomersModule { }
+export class ProductsModule { }

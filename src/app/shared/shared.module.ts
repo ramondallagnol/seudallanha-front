@@ -10,6 +10,9 @@ import { ContentPlaceholderAnimationComponent } from './content-placeholder-anim
 import { LocalDatePipe } from './pipes/local-date.pipe';
 import { YesNoPipe } from './pipes/yes-no.pipe';
 import { LayoutComponent } from './layout/layout.component';
+import { MatNativeDateModule } from '@angular/material/core'; 
+import { DatePickerMonthYearComponent } from './date-picker-month-year/date-picker-month-year';
+
 
 @NgModule({
   imports: [
@@ -18,6 +21,7 @@ import { LayoutComponent } from './layout/layout.component';
     FormsModule,
     ReactiveFormsModule,
     FlexLayoutModule,
+    MatNativeDateModule
   ],
   declarations: [
     ConfirmDialogComponent,
@@ -25,7 +29,8 @@ import { LayoutComponent } from './layout/layout.component';
     LimitToPipe,
     LocalDatePipe,
     YesNoPipe,
-    LayoutComponent
+    LayoutComponent,
+    DatePickerMonthYearComponent
   ],
   exports: [
     FormsModule,
@@ -36,7 +41,9 @@ import { LayoutComponent } from './layout/layout.component';
     ConfirmDialogComponent,
     ContentPlaceholderAnimationComponent,
     LocalDatePipe,
-    YesNoPipe
+    YesNoPipe,
+    MatNativeDateModule,
+    DatePickerMonthYearComponent
   ],
   entryComponents: [
     ConfirmDialogComponent

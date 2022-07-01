@@ -29,8 +29,6 @@
 
     </mat-menu>
 
-
-
     <button mat-button [matMenuTriggerFor]="userMenu">
       <mat-icon>person</mat-icon>
       <span fxShow fxHide.xs>
@@ -75,18 +73,11 @@
           <p mat-line> Customers </p>
         </a>
 
-        <a mat-list-item [routerLink]="['/products']" routerLinkActive="active">
+        <a mat-list-item [routerLink]="['/bills']" routerLinkActive="active">
           <mat-icon mat-list-icon>
-            product
+            $
           </mat-icon>
-          <p mat-line> Produtos </p>
-        </a>
-
-        <a mat-list-item [routerLink]="['/users']" routerLinkActive="active">
-          <mat-icon mat-list-icon>
-            people
-          </mat-icon>
-          <p mat-line> Users </p>
+          <p mat-line> Finanças</p>
         </a>
 
         <a mat-list-item [routerLink]="['/account/profile']">
@@ -97,23 +88,6 @@
         <a mat-list-item [routerLink]="['/auth/login']">
           <mat-icon mat-list-icon>exit_to_app</mat-icon>
           <p mat-line> Log out </p>
-        </a>
-
-        <mat-divider></mat-divider>
-
-        <h3 mat-subheader>Resources</h3>
-
-        <a mat-list-item [routerLink]="['/icons']" routerLinkActive="active">
-          <mat-icon mat-list-icon>
-            toll
-          </mat-icon>
-          <p mat-line> Icons </p>
-        </a>
-        <a mat-list-item [routerLink]="['/typography']" routerLinkActive="active">
-          <mat-icon mat-list-icon>
-            font_download
-          </mat-icon>
-          <p mat-line> Typography </p>
         </a>
 
         <a mat-list-item href="https://material.angular.io/components/categories" target="_blank">

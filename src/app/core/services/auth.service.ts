@@ -53,7 +53,7 @@ export class AuthenticationService {
             id: '12312323232',
             alias: 'clairto@gmail.com'.split('@')[0],
             expiration: moment().add(1, 'days').toDate(),
-            fullName: 'Clairto da Gerusa'
+            fullName: 'Ramon'
         };
     }
 

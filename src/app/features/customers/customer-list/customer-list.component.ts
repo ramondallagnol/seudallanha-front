@@ -4,8 +4,8 @@ import { MatTableDataSource } from '@angular/material/table';
 import { NGXLogger } from 'ngx-logger';
 import { Title } from '@angular/platform-browser';
 import { NotificationService } from 'src/app/core/services/notification.service';
-import { Product } from '../../products/product';
-import { ProductService } from '../../products/product.service';
+import { Bill } from '../../bills/bill';
+import { BillService } from '../../bills/bill.service';
 
 export interface PeriodicElement {
   name: string;
@@ -14,7 +14,7 @@ export interface PeriodicElement {
   symbol: string;
 }
 
-let ELEMENT_DATA: Product[] = [];
+let ELEMENT_DATA: Bill[] = [];
 
 @Component({
   selector: 'app-customer-list',
@@ -32,12 +32,12 @@ export class CustomerListComponent implements OnInit {
     private logger: NGXLogger,
     private notificationService: NotificationService,
     private titleService: Title,
-    private productService: ProductService
+    private billService: BillService
   ) { }
 
   ngOnInit() {
     this.titleService.setTitle('angular-material-template - Customers');
-    this.productService.getProductList().subscribe((products) => console.log(products));
+    this.billService.getBillList().subscribe((bills) => console.log(bills));
     this.logger.log('Customers loaded');
     this.notificationService.openSnackBar('Customers loaded');
     this.dataSource.sort = this.sort;

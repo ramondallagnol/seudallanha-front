@@ -1,0 +1,29 @@
+<h1 mat-dialog-title>
+  Lançamento
+</h1>
+
+<div class="container">
+  <mat-form-field appearance="fill">
+    <mat-label>Descrição</mat-label>
+    <input matInput [formControl]="description" required>
+  </mat-form-field>
+  
+  <mat-form-field appearance="fill" floatLabel="always">
+    <mat-label>Valor</mat-label>
+    <input matInput type="number" class="right-align" placeholder="0" [formControl]="amount">
+    <span matPrefix>R$&nbsp;</span>
+  </mat-form-field>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Tipo</mat-label>
+    <mat-select [formControl]="billType">
+      <mat-option value="INCOME">Receita</mat-option>
+      <mat-option value="EXPENSE">Despesa</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onDismiss()">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="onConfirm()">Salvar</button>
+</div>

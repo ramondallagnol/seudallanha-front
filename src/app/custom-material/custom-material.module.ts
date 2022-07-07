@@ -1,5 +1,5 @@
-import { NgModule, LOCALE_ID } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule, LOCALE_ID, DEFAULT_CURRENCY_CODE } from '@angular/core';
+import { CommonModule, registerLocaleData } from '@angular/common';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
@@ -35,6 +35,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { SelectCheckAllComponent } from './select-check-all/select-check-all.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MAT_DATE_FORMATS } from '@angular/material/core';
+import ptBr from '@angular/common/locales/pt';
 
 export const MY_FORMATS = {
   parse: {
@@ -47,6 +48,8 @@ export const MY_FORMATS = {
     monthYearA11yLabel: 'MMMM YYYY'
   }
 };
+
+registerLocaleData(ptBr);
 
 @NgModule({
   imports: [
@@ -75,7 +78,8 @@ export const MY_FORMATS = {
       provide: MAT_DATE_FORMATS,
       useValue: MY_FORMATS
     },
-    { provide: LOCALE_ID, useValue: 'en-gb' }
+    { provide: LOCALE_ID, useValue: 'pt' },
+    { provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL' },
   ],
   declarations: [SelectCheckAllComponent]
 })

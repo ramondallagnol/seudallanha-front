@@ -3,5 +3,6 @@
   }
   
 .example-month-picker .mat-calendar-arrow {
+  width: 100%;
     display: none;
 }  

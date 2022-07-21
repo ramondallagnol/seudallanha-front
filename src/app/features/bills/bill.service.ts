@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 
 export class BillService {
 
-  private baseUrl = 'http://localhost:8080/api/v1/bills';
+  private baseUrl = 'https://seudallanha.herokuapp.com/api/v1/bills';
 
   constructor(private http: HttpClient) { }
 
